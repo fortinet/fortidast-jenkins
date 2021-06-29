@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <dependencies>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>credentials</artifactId>
+      <version>2.1.19</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jenkins-ci.plugins</groupId>
+      <artifactId>plain-credentials</artifactId>
+      <version>1.4</version>
+    </dependency>
+  </dependencies>
+  <parent>
+    <groupId>org.jenkins-ci.plugins</groupId>
+    <artifactId>plugin</artifactId>
+    <version>4.1</version>
+    <relativePath />
+  </parent>
+  <groupId>com.fortipentest</groupId>
+  <artifactId>FortiPenTest</artifactId>
+  <version>1.0</version>
+  <packaging>hpi</packaging>
+
+  <properties>
+    <jenkins.version>2.212</jenkins.version>
+    <java.level>8</java.level>
+    <jenkins-test-harness.version>2.33</jenkins-test-harness.version>
+    <checkstyle.config.location>/src/main/resources/checkstyle.xml</checkstyle.config.location>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-checkstyle-plugin</artifactId>
+          <version>2.17</version>
+          <executions>
+            <execution>
+              <id>validate</id>
+              <phase>validate</phase>
+              <configuration>
+                <configLocation>/src/main/resources/checkstyle.xml</configLocation>
+                <includeTestSourceDirectory>true</includeTestSourceDirectory>
+                <encoding>UTF-8</encoding>
+                <consoleOutput>false</consoleOutput>
+              </configuration>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <repositories>
+    <repository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>repo.jenkins-ci.org</id>
+      <url>https://repo.jenkins-ci.org/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
+
+</project>

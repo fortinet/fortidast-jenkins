@@ -1,0 +1,64 @@
+
+<?jelly escape-by-default='true'?>
+<j:jelly xmlns:j="jelly:core"  xmlns:j2="null"  xmlns:l="/lib/layout" xmlns:st="jelly:stapler">
+
+  <st:adjunct includes="org.kohsuke.stapler.jquery"/>
+  <!-- avoid conflict with prototype.js in core -->
+   
+      <l:layout title="Scan Summary"> 
+        <l:side-panel> 
+          <st:include page="sidepanel.jelly" it="${it.run}" optional="true" /> 
+        </l:side-panel>
+        <l:main-panel> 
+          <html>
+          
+          <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: auto;
+              height:auto;
+            }
+
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+          </style>
+          <body>
+          <h2>OWASP CATEGORY </h2> 
+          <h3>Scan URL - ${it.target}</h3>
+          <table>
+            <th>VulnerabilityType</th>
+            <th>Enabled</th> 
+            <th>Total</th> 
+            <th>Critical</th> 
+            <th>High</th>
+            <th>Medium</th>
+            <th>Low</th>
+            <th>None</th>
+            <j:forEach items="${it.vulnJson}" var="jvar_word">
+            <j:set var="thisCat" value="${jvar_word.severitycount}" />    
+                <tr>
+                <td>${jvar_word.vulnerabilitytype}</td>
+                <td>${jvar_word.category_enabled}</td>
+                <td>${thisCat.Total}</td>
+                <td>${jvar_word.severitycount.Critical}</td>
+                <td>${jvar_word.severitycount.High}</td>
+                <td>${jvar_word.severitycount.Medium}</td>
+                <td>${jvar_word.severitycount.Low}</td>
+                <td>${jvar_word.severitycount.None}</td>
+                </tr>
+            </j:forEach>
+          </table>
+          </body>
+          </html>
+          </l:main-panel>
+     
+    </l:layout>
+</j:jelly>
+
