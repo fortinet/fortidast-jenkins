@@ -32,13 +32,7 @@
 -->
 
 <module name="Checker">
-    <!--
-        If you set the basedir property below, then all reported file
-        names will be relative to the specified directory. See
-        https://checkstyle.org/5.x/config.html#Checker
 
-        <property name="basedir" value="${basedir}"/>
-    -->
     <property name="severity" value="error"/>
 
     <property name="fileExtensions" value="java, properties, xml"/>

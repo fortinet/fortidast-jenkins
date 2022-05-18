@@ -10,9 +10,9 @@ platforms such as Windows, Linux distributions, and in Docker
 containers. You can integrate FortiPenTest with Jenkins so that your
 builds can trigger a scan.
 
-# 2.Compiling, Installing and Configuring FortiPenTest Jenkins Plugin
+# 1.Compiling, Installing and Configuring FortiPenTest Jenkins Plugin
 
-## 2.1. Compiling FortiPenTest Jenkins Plugin
+## 1.1. Compiling FortiPenTest Jenkins Plugin
 
 -   Jenkins is based on Java, so to build Jenkins plugins you need to
     install a Java Development Kit (JDK). Recent Jenkins releases
@@ -27,7 +27,7 @@ builds can trigger a scan.
 
 -   It will generate FortiPenTest.hpi file under target folder.
 
-## 2.2. Installing FortiPenTest Jenkins Plugin
+## 1.2. Installing FortiPenTest Jenkins Plugin
 
 -   In the Jenkins UI, click on the *Manage Jenkins* menu option.
 
@@ -46,7 +46,7 @@ builds can trigger a scan.
     *Restart Jenkins when installation is complete and no jobs are
     running*.
 
-## 2.3. Configuring FortiPenTest Jenkins Plugin
+## 1.3. Configuring FortiPenTest Jenkins Plugin
 
 -   In the Jenkins UI, click on the *Manage Jenkins* menu option.
 
@@ -62,7 +62,7 @@ builds can trigger a scan.
 
 -   Click on Validate to validate the fields.
 
-## 2.4. Adding FortiPenTest Scan as a Build Step in a Jenkins Job
+## 1.4. Adding FortiPenTest Scan as a Build Step in a Jenkins Job
 
 -   In the Jenkins UI, click on the New Item.
 
@@ -106,7 +106,7 @@ builds can trigger a scan.
 -   Click on the *Apply* button to save the FortiPenTest Build
     configuration.
 
-## 2.5. Scan Report
+## 1.5. Scan Report
 
  Once your initiated scan is completed, you can see the scan report on
 the build result window.
