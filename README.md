@@ -1,18 +1,18 @@
 # Overview
 
-The FortiPenTest Jenkins Plugin integrates with the Jenkins' build
-process, triggers automated FortiPenTest scans as part of the build
+The FortiDAST Jenkins Plugin integrates with the Jenkins' build
+process, triggers automated FortiDAST scans as part of the build
 process inside of the Jenkins CI platform. It can be configured to
 trigger either Quick Scan or Full Scan on the provided scan URL.
 
 Download Jenkins from <https://jenkins.io/download/>. It works on
 platforms such as Windows, Linux distributions, and in Docker
-containers. You can integrate FortiPenTest with Jenkins so that your
+containers. You can integrate FortiDAST with Jenkins so that your
 builds can trigger a scan.
 
-# 1.Compiling, Installing and Configuring FortiPenTest Jenkins Plugin
+# 2.Compiling, Installing and Configuring FortiDAST Jenkins Plugin
 
-## 1.1. Compiling FortiPenTest Jenkins Plugin
+## 2.1. Compiling FortiDAST Jenkins Plugin
 
 -   Jenkins is based on Java, so to build Jenkins plugins you need to
     install a Java Development Kit (JDK). Recent Jenkins releases
@@ -25,9 +25,9 @@ builds can trigger a scan.
 
 -   Run *mvn install command.*
 
--   It will generate FortiPenTest.hpi file under target folder.
+-   It will generate FortiDAST.hpi file under target folder.
 
-## 1.2. Installing FortiPenTest Jenkins Plugin
+## 2.2. Installing FortiDAST Jenkins Plugin
 
 -   In the Jenkins UI, click on the *Manage Jenkins* menu option.
 
@@ -36,9 +36,9 @@ builds can trigger a scan.
 
 -   On the *Jenkins Plugin Manager* page, click on the *Available* tab.
 
--   In the *Filter* field, type *FortiPenTest*.
+-   In the *Filter* field, type *FortiDAST*.
 
--   Click on the checkbox next to the *FortiPenTest* plugin.
+-   Click on the checkbox next to the *FortiDAST* plugin.
 
 -   Click on the *Install without restart* button.
 
@@ -46,23 +46,23 @@ builds can trigger a scan.
     *Restart Jenkins when installation is complete and no jobs are
     running*.
 
-## 1.3. Configuring FortiPenTest Jenkins Plugin
+## 2.3. Configuring FortiDAST Jenkins Plugin
 
 -   In the Jenkins UI, click on the *Manage Jenkins* menu option.
 
 -   On the *Manage Jenkins* page, click on the *Configure System*
-    option. Scroll down to the bottom, to the *FortiPenTest* section.
+    option. Scroll down to the bottom, to the *FortiDAST* section.
 
--   By default, the *FortiPenTest API URL* field is set
-    to <https://fortipentest.com/api/v1.0>.
+-   By default, the *FortiDAST API URL* field is set
+    to <https://fortidast.forticloud.com/api/v1.0>.
 
--   Provide Username in the FortiPenTest UserName field.
+-   Provide Username in the FortiDAST UserName field.
 
--   Click on the *Apply* button to save the FortiPenTest configuration.
+-   Click on the *Apply* button to save the FortiDAST configuration.
 
 -   Click on Validate to validate the fields.
 
-## 1.4. Adding FortiPenTest Scan as a Build Step in a Jenkins Job
+## 2.4. Adding FortiDAST Scan as a Build Step in a Jenkins Job
 
 -   In the Jenkins UI, click on the New Item.
 
@@ -72,7 +72,7 @@ builds can trigger a scan.
 -   Scroll down to the bottom to the Build section.
 
 -   Click on Add build step in the Build section and Select
-    FortiPenTest.
+    FortiDAST.
 
 -   You can see below UI.
 
@@ -90,7 +90,7 @@ builds can trigger a scan.
 -   In the *Scope* field, select *Global (Jenkins, nodes, items, all
     child items, etc)*.
 
--   Open the FortiPenTest user interface to retrieve the FortiPenTest
+-   Open the FortiDAST user interface to retrieve the FortiDAST
     API key
 
     -   Click on User icon and click on settings
@@ -103,10 +103,10 @@ builds can trigger a scan.
 -   Click on the *Add* button to close the *Jenkins Credentials
     Provider* dialog.
 
--   Click on the *Apply* button to save the FortiPenTest Build
+-   Click on the *Apply* button to save the FortiDAST Build
     configuration.
 
-## 1.5. Scan Report
+## 2.5. Scan Report
 
  Once your initiated scan is completed, you can see the scan report on
 the build result window.

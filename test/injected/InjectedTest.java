@@ -6,10 +6,10 @@ import java.util.*;
  */
 public class InjectedTest extends junit.framework.TestCase {
   public static junit.framework.Test suite() throws Exception {
-    System.out.println("Running tests for "+"com.fortipentest:FortiPenTest:1.0");
+    System.out.println("Running tests for "+"com.fortidast:FortiDAST:1.0");
     Map<String, Object> parameters = new HashMap<String, Object>();
     parameters.put("basedir","C:\\Users\\spy\\FortipentestSidePanel");
-    parameters.put("artifactId","FortiPenTest");
+    parameters.put("artifactId","FortiDAST");
     parameters.put("packaging","hpi");
     parameters.put("outputDirectory","C:\\Users\\spy\\FortipentestSidePanel\\target\\classes");
     parameters.put("testOutputDirectory","C:\\Users\\spy\\FortipentestSidePanel\\target\\test-classes");

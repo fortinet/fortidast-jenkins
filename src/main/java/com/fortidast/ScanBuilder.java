@@ -1,4 +1,4 @@
-package com.fortipentest;
+package com.fortidast;
 
 import com.cloudbees.plugins.credentials.CredentialsMatchers;
 import com.cloudbees.plugins.credentials.CredentialsProvider;
@@ -105,7 +105,7 @@ public class ScanBuilder extends hudson.tasks.Builder implements SimpleBuildStep
                 return ((StringCredentials) credentials).getSecret().getPlainText();
             }
         }
-        throw new IllegalStateException("Could not find FortiPenTest API Key ID: " + ncApiToken);
+        throw new IllegalStateException("Could not find FortiDAST API Key ID: " + ncApiToken);
     }
 
     @Override
@@ -257,10 +257,10 @@ public class ScanBuilder extends hudson.tasks.Builder implements SimpleBuildStep
         }
 
         /**
-         * @return return FortiPenTest which is used as Jenkins Plugin name
+         * @return return FortiDAST which is used as Jenkins Plugin name
          */
         public String getDisplayName() {
-            return "FortiPenTest";
+            return "FortiDAST";
         }
 
         /**
@@ -305,7 +305,7 @@ public class ScanBuilder extends hudson.tasks.Builder implements SimpleBuildStep
                     return ((StringCredentials) credentials).getSecret().getPlainText();
                 }
             }
-            throw new IllegalStateException("Could not find FortiPenTest API Key ID: " + ncApiToken);
+            throw new IllegalStateException("Could not find FortiDAST API Key ID: " + ncApiToken);
         }
 
         /**

@@ -1,4 +1,4 @@
-package com.fortipentest;
+package com.fortidast;
 import java.text.MessageFormat;
 import static java.util.ResourceBundle.getBundle;
 /**.

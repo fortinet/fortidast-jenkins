@@ -1,4 +1,4 @@
 <?jelly escape-by-default='true'?>
 <div>
-  Plugin for starting FortiPenTest scans
+  Plugin for starting FortiDAST scans
 </div>

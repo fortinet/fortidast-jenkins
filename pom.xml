@@ -5,22 +5,12 @@
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>credentials</artifactId>
-      <version>2.3.19</version>
+      <version>2.1.19</version>
     </dependency>
     <dependency>
       <groupId>org.jenkins-ci.plugins</groupId>
       <artifactId>plain-credentials</artifactId>
       <version>1.4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.fasterxml.jackson.core</groupId>
-      <artifactId>jackson-databind</artifactId>
-      <version>2.11.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.findbugs</groupId>
-      <artifactId>jsr305</artifactId>
-      <version>3.0.1</version>
     </dependency>
   </dependencies>
   <parent>
@@ -29,13 +19,13 @@
     <version>4.1</version>
     <relativePath />
   </parent>
-  <groupId>com.fortipentest</groupId>
-  <artifactId>FortiPenTest</artifactId>
-  <version>1.0.2</version>
+  <groupId>com.fortidast</groupId>
+  <artifactId>FortiDAST</artifactId>
+  <version>1.0</version>
   <packaging>hpi</packaging>
 
   <properties>
-    <jenkins.version>2.319</jenkins.version>
+    <jenkins.version>2.212</jenkins.version>
     <java.level>8</java.level>
     <jenkins-test-harness.version>2.33</jenkins-test-harness.version>
     <checkstyle.config.location>/src/main/resources/checkstyle.xml</checkstyle.config.location>

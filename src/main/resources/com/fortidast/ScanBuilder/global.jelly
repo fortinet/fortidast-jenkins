@@ -1,11 +1,11 @@
 <?jelly escape-by-default='true'?>
 <j:jelly xmlns:j="jelly:core" xmlns:f="/lib/form" xmlns:c="/lib/credentials">
   
-  <f:section title="${%FortiPenTest}">
-    <f:entry title="${%FortiPenTest API URL}" field="gApiUrl">
-      <f:textbox value="${descriptor.getgApiUrl()}" default="https://fortipentest.com/api/v1.0"/>
+  <f:section title="${%FortiDAST}">
+    <f:entry title="${%FortiDAST API URL}" field="gApiUrl">
+      <f:textbox value="${descriptor.getgApiUrl()}" default="https://fortidast.forticloud.com/api/v1.0"/>
     </f:entry >
-    <f:entry title="${%FortiPenTest UserName}" field="userName">
+    <f:entry title="${%FortiDAST UserName}" field="userName">
       <f:textbox value="${descriptor.getuserName()}"/>
     </f:entry >
     <f:validateButton

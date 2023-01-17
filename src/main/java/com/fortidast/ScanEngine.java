@@ -1,4 +1,4 @@
-package com.fortipentest;
+package com.fortidast;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
