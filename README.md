@@ -14,13 +14,10 @@ builds can trigger a scan.
 
 ## 2.1. Compiling FortiDAST Jenkins Plugin
 
--   Jenkins is based on Java, so to build Jenkins plugins you need to
-    install a Java Development Kit (JDK). Recent Jenkins releases
-    require JDK 8 to run.
+-   Jenkins is based on Java, so to build Jenkins plugins you need to install a Java Development Kit (JDK). Recent Jenkins releases require JDK 8 to run. https://www.oracle.com/in/java/technologies/javase/javase8-archive-downloads.html
 
--   Jenkins's plugins mostly use Maven to build. So, download and
-    install Maven from <https://maven.apache.org/>.
-
+-   Jenkins's plugins mostly use Maven to build. So, download and install Maven from https://dlcdn.apache.org/maven/maven-3/3.8.8/binaries/apache-maven-3.8.8-bin.zip.
+-   Set MAVEN_HOME & JAVA_HOME is environment variable.
 -   Navigate to the source code directory where pom.xml file resides.
 
 -   Run *mvn install command.*
